@@ -5,6 +5,7 @@
 If you would like to help, give ideas, report bugs, or just play Lethal Company with me, you can contact me on Discord `@swaggies`. Shoot me a message anytime and I'll get back as soon as I can!
 
 ![Showcase](https://github.com/Swaggies/BetterEXP/blob/main/bxpgif.gif)
+![Round Summary](https://github.com/Swaggies/BetterEXP/blob/main/bxpimg.png)
 
 ## End-game Notes
 This mod also includes custom player notes! I've changed the way notes are distributed to make sure up to 3 notes can be shown consistently, and also display the corresponding stat for each note (eg. how much scrap the most profitable employee collected). This (hopefully) also fixes some bugs where the Most profitable and Most paranoid stats weren't getting reset after the day ended (somewhat important for this mod).
