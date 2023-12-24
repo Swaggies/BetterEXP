@@ -34,11 +34,12 @@ Here's the list of notes including old and new:
     - Collecting 1000 to 1500 awards **60 to 75 BXP**
     - Collecting any more than 1500 will cap at **75 BXP**
     - The BXP scales with each credit earned; for example, getting 850 creds (halfway between 700 and 1000) gives 55 BXP (halfway between 50 and 60 BXP).
-- Being the most profitable employee grants a 25% bonus to your scrap collected.
-- Dying will lose you 10 BXP, plus some extra BXP, the higher rank you are.
-- If everyone dies, the BXP Penalty for dying is **doubled**.
+- Being the most profitable employee grants a 25% bonus to your scrap collected, unless everyone died.
+- Dying will lose you 15 BXP, plus some extra BXP, the higher rank you are.
+- If everyone dies, the BXP Penalty for dying is amplified by **50%**.
 - The BXP Penalty for dying is capped at -99 BXP. Likewise, the BXP from collecting scrap is capped at +99 BXP.
-- Killing enemies will now earn you BXP, **regardless of how it dies or who kills it**. Using landmines, lightning, or even another enemy to kill an enemy **will** grant BXP. You will also be notified at the bottom of your screen when an enemy dies.
+- Killing enemies will earn you BXP, **regardless of how it dies or who kills it**. Using landmines, lightning, or even another enemy to kill an enemy **will** grant BXP. You will also be notified at the bottom of your screen when an enemy dies.
+- Depending on the weather of the moon, you may receive a bonus to your BXP earned from collecting scrap. Be warned though, as dying will also bear a larger penalty.
 
 ### New Rank Table
 | Rank | BXP |
@@ -72,17 +73,30 @@ Here's the list of notes including old and new:
 | Snare Flea | **3 BXP** |
 | Hoarding Bug | **4 BXP** |
 | Thumper | **6 BXP** |
-| Bunker Spider | **8 BXP** |
-| Nutcracker | **8 BXP** |
-| Masked | **9 BXP** |
+| Bunker Spider | **9 BXP** |
+| Nutcracker | **9 BXP** |
+| Masked | **10 BXP** |
 | Baboon Hawk | **10 BXP** |
 | Bracken | **12 BXP** |
-| Eyeless Dog | **24 BXP** |
+| Eyeless Dog | **15 BXP** |
+
+### Weather Bonuses
+| Weather | Scrap/Death Multiplier |
+| :-----: | :--------------------: |
+| None | 0% |
+| Rainy | **+5%** |
+| Foggy | **+5%** |
+| Flooded | **+10%** |
+| Stormy | **+15%** |
+| Eclipsed | **+35%** |
 
 
 ## Things to note
 ### Does BetterEXP replace the old system?
-Nope, the BetterEXP system will run **alongside** the vanilla exp system. After a game, the XP bar will show your BetterXP Rank and XP amount, but your vanilla xp will still secretly be accounted for in the background. At any time, you may type `bxp/vanilla` in the in-game chat to view your current vanilla xp. You may also type `bxp/level` to view your current BetterXP level.
+Nope, the BetterEXP system will run **alongside** the vanilla exp system. After a game, the XP bar will show your BetterXP Rank and XP amount, but your vanilla xp will still secretly be accounted for in the background. At any time, you may type `bxp/vanilla` in the in-game chat to view your current vanilla xp. You may also type `bxp/level` or open the pause menu to view your current BetterXP level.
+
+### Can I turn off enemy notifications?
+Yeah! Send `bxp/killnotif` in the chat to toggle it on and off. It'll save automatically for you.
 
 ### Headstart
 When you first load in with the BetterEXP mod, you'll start with 0 BXP at Intern rank. However, if you've played Lethal Company quite a bit, you'll start at a higher BetterXP level than just Intern. You'll receive a notification in-game about what your starting rank is. This will only display once, even if you reinstall the mod. You will be able to safely uninstall and reinstall the mod without affecting your vanilla XP, however, **you can not progress your BetterXP level without having the mod active** (duh).
@@ -96,3 +110,6 @@ When you first load in with the BetterEXP mod, you'll start with 0 BXP at Intern
 | Boss (1500 EXP) | **Sr. Manager** |
 | Boss (2000 EXP) | **3rd Boss** |
 | Boss (3000 EXP) | **2nd Boss** |
+
+### Incompatibilities
+Most likely anything that tampers with player notes, as well as mods that have a UI element that may overlap with the rank display in the pause menu. I'll form a list when I get enough reports.
