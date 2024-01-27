@@ -22,17 +22,19 @@ Here's the list of notes including old and new:
 - **Most Active**: took the most amount of steps.
 - **Least Working**: collected the least amount of scrap value.
 
+If any two (or more) players tie on any of these stats, they will all get the note!
+
 ## BetterXP System
 - You will now gain "BetterXP" (BXP) based on a fixed amount of scrap you get, rather than the percentage of total you can get. This makes going to harder moons net more BXP.
     - Collecting between 0 to 100 scrap awards **0 to 5 BXP**
     - Collecting 100 to 400 awards **5 to 35 BXP**
-    - Collecting 400 to 700 awards **35 to 50 BXP**
-    - Collecting 700 to 1000 awards **50 to 60 BXP**
-    - Collecting 1000 to 1500 awards **60 to 75 BXP**
-    - Collecting any more than 1500 will cap at **75 BXP**
-    - The BXP scales with each credit earned; for example, getting 850 creds (halfway between 700 and 1000) gives 55 BXP (halfway between 50 and 60 BXP).
-- Being the most profitable employee grants a 25% bonus to your scrap collected, unless everyone died.
-- Dying will lose you 15 BXP, plus some extra BXP, the higher rank you are.
+    - Collecting 400 to 700 awards **35 to 55 BXP**
+    - Collecting 700 to 1000 awards **55 to 70 BXP**
+    - Collecting 1000 to 1500 awards **70 to 80 BXP**
+    - Collecting any more than 1500 will cap at **80 BXP**
+    - The BXP scales with each credit earned; for example, getting 850 creds (halfway between 700 and 1000) gives 62 BXP (halfway between 55 and 70 BXP).
+- Being the most profitable employee or playing solo grants a 25% bonus to your scrap collected, *unless* everyone died.
+- Dying will lose you 15 BXP by default, but you'll lose more and more the higher rank you are.
 - If everyone dies, the BXP Penalty for dying is amplified by **50%**.
 - The BXP Penalty for dying is capped at -99 BXP. Likewise, the BXP from collecting scrap is capped at +99 BXP.
 - Killing enemies will earn you BXP, **regardless of how it dies or who kills it**. Using landmines, lightning, or even another enemy to kill an enemy **will** grant BXP. You will also be notified at the bottom of your screen when an enemy dies (configurable).
@@ -43,26 +45,29 @@ Here's the list of notes including old and new:
 | ---- | :-: |
 | Intern | **0 BXP** |
 | Trainee | **25 BXP** |
-| Part-Timer | **50 BXP** |
-| Full-Timer | **100 BXP** |
-| Leader | **200 BXP** |
-| Manager | **300 BXP** |
-| Sr. Manager | **400 BXP** |
-| 3rd Boss | **500 BXP** |
-| 2nd Boss | **800 BXP** |
-| 1st Boss | **1100 BXP** |
-| 3rd Vice President | **1500 BXP** |
-| 2nd Vice President | **2000 BXP** |
-| 1st Vice President | **2500 BXP** |
-| 3rd Executive V.P. | **3000 BXP** |
+| Apprentice | **50 BXP** |
+| Part-Timer | **100 BXP** |
+| Full-Timer | **200 BXP** |
+| Leader | **300 BXP** |
+| Manager | **500 BXP** |
+| Sr. Manager | **700 BXP** |
+| 3rd Boss | **1000 BXP** |
+| 2nd Boss | **1300 BXP** |
+| 1st Boss | **1600 BXP** |
+| 3rd Vice President | **2000 BXP** |
+| 2nd Vice President | **2400 BXP** |
+| 1st Vice President | **2800 BXP** |
+| 3rd Executive V.P. | **3200 BXP** |
 | 2nd Executive V.P. | **3600 BXP** |
-| 1st Executive V.P. | **4200 BXP** |
-| Deputy President | **5000 BXP** |
-| President | **6000 BXP** |
-| Vice Chairman | **7000 BXP** |
-| Chairman | **8000 BXP** |
-| Co-Founder | **9000 BXP** |
-| The Company | **9999+ BXP** |
+| 1st Executive V.P. | **4000 BXP** |
+| Deputy President | **4500 BXP** |
+| President | **5000 BXP** |
+| Vice Chairman | **6000 BXP** |
+| Chairman | **7000 BXP** |
+| Co-Founder | **8000 BXP** |
+| Founder | **9000 BXP** |
+| Greatest Asset | **10000+ BXP** |
+| The Company | **20000+ BXP** |
 
 ### Enemy Bonuses
 | Enemy | BXP Awarded |
@@ -81,8 +86,8 @@ Here's the list of notes including old and new:
 | Weather | Scrap/Death Multiplier |
 | :-----: | :--------------------: |
 | None | 0% |
-| Rainy | **+4%** |
-| Foggy | **+8%** |
+| Rainy | **+5%** |
+| Foggy | **+15%** |
 | Flooded | **+15%** |
 | Stormy | **+25%** |
 | Eclipsed | **+25%** |
@@ -100,17 +105,20 @@ When you first load in with the BetterEXP mod, you'll start with 0 BXP at Intern
 | Vanilla Rank | BetterEXP Starting Rank |
 | :----------: | :---------------------: |
 | Part-Timer | **Trainee** |
-| Employee | **Part-Timer** |
-| Leader | **Full-Timer** |
-| Boss | **Leader** |
-| Boss (1000 EXP) | **Manager** |
-| Boss (1500 EXP) | **Sr. Manager** |
-| Boss (2000 EXP) | **3rd Boss** |
+| Employee | **Apprentice** |
+| Leader | **Part-Timer** |
+| Boss | **Full-Timer** |
+| Boss (1000 EXP) | **Leader** |
+| Boss (1500 EXP) | **Manager** |
+| Boss (2000 EXP) | **Sr. Manager** |
+| Boss (2500 EXP) | **3rd Boss** |
 | Boss (3000 EXP) | **2nd Boss** |
 
 ### Incompatibilities
-Most likely anything that tampers with player notes, as well as mods that have a UI element that may overlap with the rank display in the pause menu. I'll form a list when I get enough reports.
+None that I'm aware of. Please check GitHub for updates on this, or to report an incompatibility.
 
 ---
 
-version 1.1.2
+betterexp version 1.2.0
+
+lethal company version 49
