@@ -119,6 +119,6 @@ None that I'm aware of. Please check GitHub for updates on this, or to report an
 
 ---
 
-betterexp version 1.2.0
+betterexp version 1.2.1
 
 lethal company version 49
