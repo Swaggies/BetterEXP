@@ -115,7 +115,8 @@ When you first load in with the BetterEXP mod, you'll start with 0 BXP at Intern
 | Boss (3000 EXP) | **2nd Boss** |
 
 ### Incompatibilities
-None that I'm aware of. Please check GitHub for updates on this, or to report an incompatibility.
+- *(minor)* **LCUltrawide**: Pause menu BXP display goes off-screen.
+- *(minor)* **AdvancedCompany**: Pause menu BXP display overlaps with the "Save" button, making it unclickable.
 
 ---
 
