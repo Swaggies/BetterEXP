@@ -1,13 +1,14 @@
 # BetterEXP
 
+[GitHub](https://github.com/Swaggies/BetterEXP)
 [Thunderstore Page](https://thunderstore.io/c/lethal-company/p/Swaggies/BetterEXP/)
 
 **BetterEXP** is a Lethal Company mod looking to spice up the current experience system in the game. Right now the XP system feels a bit clunky and not a good (enough) measure of a player's true experience working for The Company, so I've created BetterEXP to hopefully make the XP system feel much more satisfying and rewarding/punishing, depending on your actions.
 
 If you would like to help, give ideas, report bugs, or just play Lethal Company with me, you can contact me on Discord `@swaggies`. Shoot me a message anytime and I'll get back as soon as I can!
 
-![Showcase](https://github.com/Swaggies/BetterEXP/blob/main/bxpgif.gif?raw=true)
-![Round Summary](https://github.com/Swaggies/BetterEXP/blob/main/bxpimg.png?raw=true)
+![Showcase](https://github.com/Swaggies/LCModAssets/blob/main/v2/v2%20performance.gif?raw=true)
+![Round Summary](https://github.com/Swaggies/LCModAssets/blob/main/v2/v2%20round%20summary_main.png?raw=true)
 
 ## End-game Notes
 This mod also includes custom player notes! I've changed the way notes are distributed to make sure up to 3 notes can be shown consistently, and also display the corresponding stat for each note (eg. how much scrap the most profitable employee collected). This (hopefully) also fixes some bugs where the Most profitable and Most paranoid stats weren't getting reset after the day ended (somewhat important for this mod).
@@ -21,24 +22,64 @@ Here's the list of notes including old and new:
 - "Most profitable" -> **Most Profitable**: collected the most scrap value.
 - **Most Active**: took the most amount of steps.
 - **Least Working**: collected the least amount of scrap value.
+- **Most Lethal**: killed the most entities in a day.
+- **The Pacifist**: was the *only* employee to not kill an entity.
 
 If any two (or more) players tie on any of these stats, they will all get the note!
 
 ## BetterXP System
-- You will now gain "BetterXP" (BXP) based on a fixed amount of scrap you get, rather than the percentage of total you can get. This makes going to harder moons net more BXP.
-    - Collecting between 0 to 100 scrap awards **0 to 5 BXP**
-    - Collecting 100 to 400 awards **5 to 35 BXP**
-    - Collecting 400 to 700 awards **35 to 55 BXP**
-    - Collecting 700 to 1000 awards **55 to 70 BXP**
-    - Collecting 1000 to 1500 awards **70 to 80 BXP**
-    - Collecting any more than 1500 will cap at **80 BXP**
-    - The BXP scales with each credit earned; for example, getting 850 creds (halfway between 700 and 1000) gives 62 BXP (halfway between 55 and 70 BXP).
-- Being the most profitable employee or playing solo grants a 25% bonus to your scrap collected, *unless* everyone died.
-- Dying will lose you 15 BXP by default, but you'll lose more and more the higher rank you are.
-- If everyone dies, the BXP Penalty for dying is amplified by **50%**.
-- The BXP Penalty for dying is capped at -99 BXP. Likewise, the BXP from collecting scrap is capped at +99 BXP.
-- Killing enemies will earn you BXP, **regardless of how it dies or who kills it**. Using landmines, lightning, or even another enemy to kill an enemy **will** grant BXP. You will also be notified at the bottom of your screen when an enemy dies (configurable).
+- You will now gain "BetterXP" (BXP) primarily based on scrap collected, and your ability to fully clear the facility of scrap. See the below table for values (where Total Scrap Value is the amount of scrap value needed for a full clear, and Max BXP Possible is the amount of BXP awarded for a full clear):
+
+| Total Scrap Value | Max BXP Possible |
+| :---------------: | :--------------: |
+| 0 - 300 | 0 - 7 |
+| 300 - 500 | 7 - 15 |
+| 500 - 700 | 15 - 25 |
+| 700 - 1000 | 25 - 36 |
+| 1000 - 1600 | 36 - 60 |
+| 1600 - 2000 | 60 - 70 |
+| 2000 - 2500 | 70 - 80 |
+| 2500 - 3000 | 80 - 88 |
+| 3000 - 4000 | 88 - 100 |
+| 4000 - 8000 | 100 - 115 |
+| 8000 - 9999 | 115 - 120 |
+| 9999+ | 120 |
+
+- Depending on how much you contributed for your team, you may receive bonus BXP as a reward.
+    - When playing solo, you are always granted a 25% bonus to your scrap collected.
+- Dying will lose you a bit of BXP, but you'll lose more and more the higher rank you are.
+- If everyone dies, the BXP Penalty for dying is amplified by **25%**.
+- The BXP Penalty for dying is capped at -100 BXP.
+- Killing enemies will earn you BXP, as long as you're the person to finish them off. Using landmines, lightning, or even another enemy to kill an enemy will not grant BXP **unless you damaged it beforehand**. You will also be notified at the bottom of your screen when an enemy dies (configurable).
+    - The more enemies you kill, the less BXP you will get for each kill.
 - Depending on the weather of the moon, you may receive a bonus to your BXP earned from collecting scrap. Be warned though, as dying will also bear a larger penalty.
+
+### Enemy Bonuses
+| Enemy | Base BXP |
+| ----- | :---------: |
+| Tulip Snake | **1 BXP** |
+| Manticoil | **2 BXP** |
+| Snare Flea | **4 BXP** |
+| Hoarding Bug | **4 BXP** |
+| Thumper | **6 BXP** |
+| Bunker Spider | **6 BXP** |
+| Masked | **6 BXP** |
+| Butler | **8 BXP** |
+| Nutcracker | **8 BXP** |
+| Bracken | **8 BXP** |
+| Baboon Hawk | **8 BXP** |
+| Eyeless Dog | **12 BXP** |
+| Forest Giant | **16 BXP** |
+
+### Weather Bonuses
+| Weather | Scrap/Death Multiplier |
+| :-----: | :--------------------: |
+| None | 0% |
+| Rainy | **+10%** |
+| Foggy | **+15%** |
+| Flooded | **+15%** |
+| Stormy | **+25%** |
+| Eclipsed | **+25%** |
 
 ### New Rank Table
 | Rank | BXP |
@@ -48,49 +89,29 @@ If any two (or more) players tie on any of these stats, they will all get the no
 | Apprentice | **50 BXP** |
 | Part-Timer | **100 BXP** |
 | Full-Timer | **200 BXP** |
-| Leader | **300 BXP** |
-| Manager | **500 BXP** |
-| Sr. Manager | **700 BXP** |
+| Employee | **300 BXP** |
+| Leader | **400 BXP** |
+| Manager | **600 BXP** |
+| Sr. Manager | **800 BXP** |
 | 3rd Boss | **1000 BXP** |
 | 2nd Boss | **1300 BXP** |
 | 1st Boss | **1600 BXP** |
 | 3rd Vice President | **2000 BXP** |
-| 2nd Vice President | **2400 BXP** |
-| 1st Vice President | **2800 BXP** |
-| 3rd Executive V.P. | **3200 BXP** |
-| 2nd Executive V.P. | **3600 BXP** |
-| 1st Executive V.P. | **4000 BXP** |
-| Deputy President | **4500 BXP** |
+| 2nd Vice President | **2300 BXP** |
+| 1st Vice President | **2600 BXP** |
+| 3rd Executive V.P. | **3000 BXP** |
+| 2nd Executive V.P. | **3300 BXP** |
+| 1st Executive V.P. | **3600 BXP** |
+| 3rd Deputy President | **4000 BXP** |
+| 2nd Deputy President | **4300 BXP** |
+| 1st Deputy President | **4600 BXP** |
 | President | **5000 BXP** |
+| Sr. President | **5500 BXP** |
 | Vice Chairman | **6000 BXP** |
-| Chairman | **7000 BXP** |
-| Co-Founder | **8000 BXP** |
-| Founder | **9000 BXP** |
-| Greatest Asset | **10000+ BXP** |
-| The Company | **20000+ BXP** |
-
-### Enemy Bonuses
-| Enemy | BXP Awarded |
-| ----- | :---------: |
-| Snare Flea | **3 BXP** |
-| Hoarding Bug | **4 BXP** |
-| Thumper | **6 BXP** |
-| Bunker Spider | **9 BXP** |
-| Nutcracker | **9 BXP** |
-| Masked | **10 BXP** |
-| Baboon Hawk | **10 BXP** |
-| Bracken | **12 BXP** |
-| Eyeless Dog | **15 BXP** |
-
-### Weather Bonuses
-| Weather | Scrap/Death Multiplier |
-| :-----: | :--------------------: |
-| None | 0% |
-| Rainy | **+5%** |
-| Foggy | **+15%** |
-| Flooded | **+15%** |
-| Stormy | **+25%** |
-| Eclipsed | **+25%** |
+| Chairman | **6500 BXP** |
+| First-Class Asset| **7500 BXP** |
+| Co-Founder | **8500 BXP** |
+| Founder | **10000+ BXP** |
 
 
 ## Things to note
@@ -108,18 +129,17 @@ When you first load in with the BetterEXP mod, you'll start with 0 BXP at Intern
 | Employee | **Apprentice** |
 | Leader | **Part-Timer** |
 | Boss | **Full-Timer** |
-| Boss (1000 EXP) | **Leader** |
-| Boss (1500 EXP) | **Manager** |
-| Boss (2000 EXP) | **Sr. Manager** |
+| Boss (1000 EXP) | **Employee** |
+| Boss (1500 EXP) | **Leader** |
+| Boss (2000 EXP) | **Manager** |
 | Boss (2500 EXP) | **3rd Boss** |
-| Boss (3000 EXP) | **2nd Boss** |
+| Boss (3000 EXP) | **3rd Boss** |
 
 ### Incompatibilities
 - *(minor)* **LCUltrawide**: Pause menu BXP display goes off-screen.
 - *(minor)* **AdvancedCompany**: Pause menu BXP display overlaps with the "Save" button, making it unclickable.
-
 ---
 
-betterexp version 1.2.1
+betterexp version 2.0.0
 
-lethal company version 49
+lethal company version 50
