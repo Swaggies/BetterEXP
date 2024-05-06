@@ -3,7 +3,7 @@
 [GitHub](https://github.com/Swaggies/BetterEXP)
 [Thunderstore Page](https://thunderstore.io/c/lethal-company/p/Swaggies/BetterEXP/)
 
-**BetterEXP** is a Lethal Company mod looking to spice up the current experience system in the game. Right now the XP system feels a bit clunky and not a good (enough) measure of a player's true experience working for The Company, so I've created BetterEXP to hopefully make the XP system feel much more satisfying and rewarding/punishing, depending on your actions.
+**BetterEXP** is a Lethal Company mod looking to spice up the current experience system in the game. Right now the XP system feels a bit clunky and not a good (enough) measure of a player's true experience working for The Company, so I've created BetterEXP to hopefully make the XP system feel much more satisfying and rewarding/punishing, depending on your actions. This is a **client-sided** mod, meaning nobody else needs it for it to work! BetterEXP functions perfectly in completely vanilla lobbies.
 
 If you would like to help, give ideas, report bugs, or just play Lethal Company with me, you can contact me on Discord `@swaggies`. Shoot me a message anytime and I'll get back as soon as I can!
 
@@ -11,9 +11,9 @@ If you would like to help, give ideas, report bugs, or just play Lethal Company 
 ![Round Summary](https://github.com/Swaggies/LCModAssets/blob/main/v2/v2%20round%20summary_main.png?raw=true)
 
 ## End-game Notes
-This mod also includes custom player notes! I've changed the way notes are distributed to make sure up to 3 notes can be shown consistently, and also display the corresponding stat for each note (eg. how much scrap the most profitable employee collected). This (hopefully) also fixes some bugs where the Most profitable and Most paranoid stats weren't getting reset after the day ended (somewhat important for this mod).
+This mod includes some custom player notes! I've changed the way notes are distributed to make sure up to 3 notes can be shown consistently, and also display the corresponding stat for each note (eg. how much scrap the most profitable employee collected), which can be disabled in the config. This also fixes some bugs where the Most profitable and Most paranoid stats weren't getting reset after the day ended (somewhat relevant for this mod).
 
-*Note that this may conflict with mods that also tamper with player notes, I haven't tested compatibilities, report to me on Discord with findings!!*
+*Note that this may conflict with mods that also tamper with player notes, I haven't tested compatibilities, report to me on Discord with findings!! BetterEXP is 100% compatible with [Coroner](https://thunderstore.io/c/lethal-company/p/EliteMasterEric/Coroner/).*
 
 Here's the list of notes including old and new:
 - "The laziest employee" -> **The Laziest**: took the fewest amount of steps.
@@ -24,6 +24,13 @@ Here's the list of notes including old and new:
 - **Least Working**: collected the least amount of scrap value.
 - **Most Lethal**: killed the most entities in a day.
 - **The Pacifist**: was the *only* employee to not kill an entity.
+
+These notes are disabled by default, you can enable them in the config!
+- **Most Jumpy**: jumped the most in a day.
+- **Most Grounded**: jumped the least in a day.
+- **The Bravest**: spent the most time inside the facility.
+- **Most Outdoors**: spent the most time outside.
+- **The Ship Guy**: spent the most time in the ship.
 
 If any two (or more) players tie on any of these stats, they will all get the note!
 
@@ -118,9 +125,6 @@ If any two (or more) players tie on any of these stats, they will all get the no
 ### Does BetterEXP replace the old system?
 Nope, the BetterEXP system will run **alongside** the vanilla exp system. After a game, the XP bar will show your BetterXP Rank and XP amount, but your vanilla xp will still secretly be accounted for in the background. At any time, you may type `bxp/vanilla` in the in-game chat to view your current vanilla xp. You may also type `bxp/level` or open the pause menu to view your current BetterXP level.
 
-### Can I turn off enemy notifications?
-Yeah! You can tweak a few options in the config file. Access it through your mod manager, or `BepInEx/config`.
-
 ### Headstart
 When you first load in with the BetterEXP mod, you'll start with 0 BXP at Intern rank. However, if you've played Lethal Company quite a bit, you'll start at a higher BetterXP level than just Intern. You'll receive a notification in-game about what your starting rank is. This will only display once, even if you reinstall the mod. You will be able to safely uninstall and reinstall the mod without affecting your vanilla XP, however, **you can not progress your BetterXP level without having the mod active** (duh).
 | Vanilla Rank | BetterEXP Starting Rank |
@@ -137,9 +141,8 @@ When you first load in with the BetterEXP mod, you'll start with 0 BXP at Intern
 
 ### Incompatibilities
 - *(minor)* **LCUltrawide**: Pause menu BXP display goes off-screen.
-- *(minor)* **AdvancedCompany**: Pause menu BXP display overlaps with the "Save" button, making it unclickable.
 ---
 
-betterexp version 2.0.0
+betterexp version 2.1.0
 
 lethal company version 50
